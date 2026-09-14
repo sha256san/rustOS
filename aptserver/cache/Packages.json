@@ -1,0 +1,70 @@
+[
+  {
+    "name": "neofetch",
+    "version": "7.1.0-4",
+    "size": "82 KB",
+    "depends": []
+  },
+  {
+    "name": "curl",
+    "version": "7.88.1-10",
+    "size": "198 KB",
+    "depends": [
+      "libcurl4"
+    ]
+  },
+  {
+    "name": "libcurl4",
+    "version": "7.88.1-10",
+    "size": "290 KB",
+    "depends": []
+  },
+  {
+    "name": "git",
+    "version": "2.39.2-1",
+    "size": "3.2 MB",
+    "depends": [
+      "git-man"
+    ]
+  },
+  {
+    "name": "git-man",
+    "version": "2.39.2-1",
+    "size": "980 KB",
+    "depends": []
+  },
+  {
+    "name": "python3",
+    "version": "3.11.2-1",
+    "size": "24 KB",
+    "depends": [
+      "python3-minimal"
+    ]
+  },
+  {
+    "name": "python3-minimal",
+    "version": "3.11.2-1",
+    "size": "1.2 MB",
+    "depends": []
+  },
+  {
+    "name": "tree",
+    "version": "2.1.0-1",
+    "size": "52 KB",
+    "depends": []
+  },
+  {
+    "name": "ssh",
+    "version": "1:9.2p1-2",
+    "size": "320 KB",
+    "depends": [
+      "openssh-client"
+    ]
+  },
+  {
+    "name": "openssh-client",
+    "version": "1:9.2p1-2",
+    "size": "1.0 MB",
+    "depends": []
+  }
+]

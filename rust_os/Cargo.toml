@@ -1,0 +1,22 @@
+[package]
+name = "rust_os"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+spin = "0.9.8"
+x86_64 = { version = "0.14.13", default-features = false, features = ["instructions", "abi_x86_interrupt"] }
+lazy_static = { version = "1.4.0", features = ["spin_no_std"] }
+pc-keyboard = "0.7.0"
+pic8259 = { version = "0.10.1", default-features = false, features = ["stable"] }
+bootloader = "0.9.23"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
+[package.metadata.bootimage]
+build-command = ["build", "-Z", "build-std=core,alloc,compiler_builtins", "-Z", "build-std-features=compiler-builtins-mem"]
+run-args = ["-serial", "mon:stdio", "-serial", "tcp:127.0.0.1:12345,server,nowait"]

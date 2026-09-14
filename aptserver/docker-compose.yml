@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  aptserver:
+    build: .
+    container_name: rust_os_aptserver
+    ports:
+      - "8080:8080"
+      - "12345:12345"
+    volumes:
+      - ./cache:/app/cache
+    restart: always

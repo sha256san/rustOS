@@ -1,0 +1,29 @@
+# Rust build artifacts
+target/
+**/target/
+**/*.rs.bk
+
+# OS images and build outputs
+*.iso
+*.vmdk
+*.img
+*.bin
+iso/
+rust_os/iso/
+rust_os/build/
+
+# Cache directories
+.cache/
+**/.cache/
+
+# aptserver package caches (exclude downloaded debs/tars, keep Packages.json)
+aptserver/cache/*.tar
+aptserver/cache/*.deb
+aptserver/cache/staging_*
+
+# Ensure required initfs is tracked
+!rust_os/src/initfs.tar
+
+# IDE and OS metadata
+.DS_Store
+Thumbs.db
